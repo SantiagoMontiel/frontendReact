@@ -7,9 +7,9 @@ class Badge extends React.Component {
   render() {
     return (
     <div className="Badge">
-        <div className="Badge__header">
-            <img src={confLogo} alt="Logo deL Banco"/>
-        </div>
+        {/*<div className="Badge__header">*/}
+        {/*    <img src={confLogo} alt="Logo deL Banco"/>*/}
+        {/*</div>*/}
 
         <div className="Badge__section-name">
             <img className="Badge__avatar" src={this.props.avatarUrl} alt="Avatar"/>
