@@ -21,7 +21,7 @@ class Badge extends React.Component {
             <div>{this.props.email}</div>
         </div>
             <div className="Badge__footer">
-                #Baufest
+                #Banco Galicia
             </div>
         </div>
     );
