@@ -31,8 +31,8 @@ a.link-unstyled:hover {
 
 .btn.btn-primary {
   color: #fff;
-  background-color: #7DCD40;
-  border-color: #7DCD40;
+  background-color: #fa6400;
+  border-color: #fa6400;
 }
 
 .btn.btn-primary:not(:disabled):not(.disabled):hover {
