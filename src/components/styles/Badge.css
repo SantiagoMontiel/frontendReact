@@ -3,7 +3,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10);
   border-radius: 8px 8px 8px 8px;
   overflow: hidden;
-  height: 340px;
+  height: 390px;
 }
 
 .Badge__header {
@@ -16,9 +16,9 @@
 
 .Badge__section-name {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 20px;
 }
 
 .Badge__section-info {

@@ -4,6 +4,10 @@ import './styles/Badge.css';
 import confLogo from '../images/Banco_galicia_logo.png';
 
 class Badge extends React.Component {
+
+    handleClick = e => {
+        console.log("Button was clicked");
+    };
   render() {
     return (
     <div className="Badge">
@@ -13,16 +17,17 @@ class Badge extends React.Component {
 
         <div className="Badge__section-name">
             <img className="Badge__avatar" src={this.props.avatarUrl} alt="Avatar"/>
-            <h1> {this.props.firstName} <br/> {this.props.lastName}</h1>
+            <h3> Crearás un acuerdo por: <br/>${this.props.amount}</h3>
         </div>
 
         <div className="Badge__section-info">
-            <h3>{this.props.jobTitle}</h3>
-            <div>{this.props.email}</div>
+            <h3>Desde: {this.props.startDate}</h3>
+            <h3>Hasta: {this.props.expirationDate}</h3>
         </div>
             <div className="Badge__footer">
-                #Banco Galicia
+                Sobre la cuenta: {this.props.account}
             </div>
+        <button onClick={this.handleClick} className="btn btn-primary float-right">Continuar</button>
         </div>
     );
   }
