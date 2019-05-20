@@ -5,13 +5,14 @@ import Layout from "./Layout";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/Home"
 import Agreements from "../pages/Agreements";
+import RickAndMorty from "../pages/RickAndMorty";
 
 function App() {
   return(
       <BrowserRouter>
         <Layout>
           <Switch>
-            <Route exact path="/agreements" component={Agreements}/>
+            <Route exact path="/agreements" component={RickAndMorty}/>
             <Route exact path="/badges/new" component={BadgeNew}/>
             <Route exact path="/" component={Home}/>
             <Route component={NotFound}/>

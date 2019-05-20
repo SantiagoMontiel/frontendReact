@@ -4,12 +4,7 @@ import Badge from "../components/Badge";
 import Margin from "../components/Margin"
 
 class Agreements extends React.Component{
-    state = { form: {
-            amount: null,
-            startDate:null,
-            expirationDate: null,
-            account:null}
-    };
+
 
     handleChange = e => {
         this.setState({
@@ -19,7 +14,45 @@ class Agreements extends React.Component{
             }
         });
     };
+
+    constructor(props){
+        super(props);
+        console.log("1. constructor()");
+        this.state = {form: {
+            amount: null,
+            startDate:null,
+            expirationDate: null,
+            account: null,
+            position: null}};
+    }
+
+    componentDidMount(){
+        // console.log('3. componentDidMount()');
+        // this.timeoutId = setTimeout(()=>{
+        //     this.setState({form: {
+        //         position: 'Frontend Engineer'}})
+        // },3000);
+        this.fetchCharacters();
+    };
+    fetchCharacters = async () => {
+        const response = await fetch('https://rickandmortyapi.com/api/character/?page=1');
+        const data = await response.json();
+    };
+
+    componentDidUpdate(prevProps, prevState) {
+        // console.log("5. componentDidUpdate");
+        // console.log({prevProps: prevProps, prevState: prevState});
+        // console.log({props: this.props, state: this.state});
+    }
+
+    componentWillUnmount() {
+        // console.log("6. componentWillUnmount");
+        // clearTimeout(this.timeoutId);
+    }
+
+
     render() {
+        console.log("2. render()");
         return<div>
             {/*<div className="BadgeNew__hero">*/}
             {/*  <img className="img-fluid" src={header} alt="Logo"/>*/}
@@ -36,13 +69,7 @@ class Agreements extends React.Component{
 
                     <div className="col-6">
                             <div className="row">
-                                <Margin amount="500.000" type="disponible" message="Tu monto disponible"/>
-                            </div>
-                            <div className="row">
-                                <Margin amount="800.000" type="utilizado" message="Tu monto utilizado"/>
-                            </div>
-                            <div className="row">
-                                <Margin amount="1.300.000" type="calificado" message="Tu monto calificado"/>
+                                <Margin/>
                             </div>
                     </div>
                 </div>
