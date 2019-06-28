@@ -43,7 +43,7 @@ class RickAndMorty extends React.Component{
             });
         }catch (error) {
             this.setState({
-                laoding: false,
+                loading: false,
                 error: error,
             });
         }

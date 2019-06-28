@@ -1,36 +1,30 @@
 import React from 'react';
+import confLogo from '../images/badge-header.svg';
+import "./styles/Badge.css"
 
-import './styles/Badge.css';
-import confLogo from '../images/Banco_galicia_logo.png';
+class Badge extends React.Component{
 
-class Badge extends React.Component {
-
-    handleClick = e => {
-        console.log("Button was clicked");
-    };
-  render() {
-    return (
-    <div className="Badge">
-        {/*<div className="Badge__header">*/}
-        {/*    <img src={confLogo} alt="Logo deL Banco"/>*/}
-        {/*</div>*/}
-
-        <div className="Badge__section-name">
-            <img className="Badge__avatar" src={this.props.avatarUrl} alt="Avatar"/>
-            <h3> Crearás un acuerdo por: <br/>${this.props.amount}</h3>
-        </div>
-
-        <div className="Badge__section-info">
-            <h3>Desde: {this.props.startDate}</h3>
-            <h3>Hasta: {this.props.expirationDate}</h3>
-        </div>
-            <div className="Badge__footer">
-                Sobre la cuenta: {this.props.account}
+    render() {
+        return(
+            <div className="Badge">
+                <div className="Badge__header">
+                    <img src={confLogo} alt="Logo de la conferencia"/>
+                </div>
+                <div className="Badge__section-name">
+                    <img className="Badge__avatar" src="https://s.gravatar.com/avatar/cac13485edfc360b210a0a36152c3eed?s=80" alt="Avatar"/>
+                    <h1>Santiago <br/> Sosa</h1>
+                </div>
+                <div className="Badge__section-info">
+                    <h3>QA Automation Engineer</h3>
+                    <div>Ig: santii.montiel</div>
+                </div>
+                <div className="Badge__footer">
+                    #platziConf
+                </div>
             </div>
-        <button onClick={this.handleClick} className="btn btn-primary float-right">Continuar</button>
-        </div>
-    );
-  }
+        )
+    }
+
 }
 
 export default Badge;
