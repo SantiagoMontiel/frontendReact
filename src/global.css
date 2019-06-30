@@ -35,24 +35,24 @@ a.link-unstyled:hover {
 
 .btn.btn-primary {
   color: #fff;
-  background-color: #fa6400;
-  border-color: #fa6400;
+  background-color: #57fa42;
+  border-color: #57fa42;
 }
 
 .btn.btn-primary:not(:disabled):not(.disabled):hover {
   color: #fff;
-  background-color: #fa6400;
-  border-color: #fa6400;
+  background-color: #57fa42;
+  border-color: #57fa42;
 }
 
 .btn.btn-primary:not(:disabled):not(.disabled):active {
   color: #fff;
-  background-color: #fa6400;
-  border-color: #fa6400;
+  background-color: #57fa42;
+  border-color: #57fa42;
 }
 
 .btn.btn-primary:not(:disabled):not(.disabled):focus {
-  box-shadow: 0 0 0 0.1rem rgb(250, 100, 0);
+  box-shadow: 0 0 0 0.1rem rgb(87, 250, 66);
 }
 
 .btn.btn-danger {

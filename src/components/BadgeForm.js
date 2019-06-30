@@ -2,33 +2,63 @@ import React from 'react';
 
 class BadgeForm extends React.Component{
 
-  handleSubmit = e => {
+  state = {
+    firstName: "Santiago"
+  };
+
+  handleChange = e => {
+    // console.log({
+    //   name: e.target.name,
+    //   value: e.target.value});
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  };
+
+  handleClick= e => {
+    console.log("Button was clicked");
+  };
+
+  handleSubmit= e => {
     e.preventDefault();
-    console.log("Button was submited");
-    console.log(this.props.formValues);
+    console.log("Form was submited");
+    console.log(this.state)
   };
 
   render() {
+    return (
+        <div>
+          <h1>New Attendant</h1>
+          <form onSubmit={this.handleSubmit}>
 
-    return <div>
-            <h1>Creá un Nuevo Acuerdo</h1>
-              <form onSubmit={this.handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="">¿De cuánto querés el acuerdo?</label>
-                  <input onChange={this.props.onChange} className="form-control" type="number" name="amount" value= {this.props.formValues.amount}/>
+            <div className="form-group">
+              <label>First Name</label>
+              <input onChange={this.handleChange} className="form-control" type="text" name="firstName" value={this.state.firstName}/>
+            </div>
 
-                  <h4>¿Qué plazo querés para tu acuerdo?</h4>
-                  <label htmlFor="">Fecha de inicio</label>
-                  <input onChange={this.props.onChange} className="form-control" type="date" name="startDate" value={this.props.formValues.startDate}/>
+            <div className="form-group">
+              <label>Last Name</label>
+              <input onChange={this.handleChange} className="form-control" type="text" name="lastName" value={this.state.lastName}/>
+            </div>
 
-                  <label htmlFor="">Fecha de fin</label>
-                  <input onChange={this.props.onChange} className="form-control" type="date" name="expirationDate" value={this.props.formValues.expirationDate}/>
+            <div className="form-group">
+              <label>Email</label>
+              <input onChange={this.handleChange} className="form-control" type="email" name="email" value={this.state.email}/>
+            </div>
 
-                  <label htmlFor="">¿En qué cuenta querés tu acuerdo?</label>
-                  <input onChange={this.props.onChange} className="form-control" type="number" name="account" value={this.props.formValues.account}/>
-                </div>
-              </form>
-          </div>
+            <div className="form-group">
+              <label>Job Title</label>
+              <input onChange={this.handleChange} className="form-control" type="text" name="jobTitle" value={this.state.jobTitle}/>
+            </div>
+
+            <div className="form-group">
+              <label>Instagram</label>
+              <input onChange={this.handleChange} className="form-control" type="text" name="instagram" value={this.state.instagram}/>
+            </div>
+
+            <button onClick={this.handleClick} className="btn btn-primary">Save</button>
+          </form>
+        </div>)
   }
 }
 
