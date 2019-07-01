@@ -19,8 +19,8 @@ export default class Home extends Component {
               />
 
               <h1>Badge Management System</h1>
-              <Link className="btn btn-primary" to="/agreements">
-                Generá tu Acuerdo
+              <Link className="btn btn-primary" to="/badges">
+                Start
               </Link>
             </div>
 
