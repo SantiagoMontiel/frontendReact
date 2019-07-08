@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 import api from '../api';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
+import Gravatar from '../components/Gravatar';
 
 class Badges extends React.Component{
 
