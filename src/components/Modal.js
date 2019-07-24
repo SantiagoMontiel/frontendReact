@@ -17,6 +17,7 @@ function Modal(props){
             </div>,
             document.getElementById('modal'))
     )
+    ReactDOM.render()
 }
 
 export default Modal;
