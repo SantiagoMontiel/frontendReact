@@ -1,4 +1,4 @@
-describe('Prueba Onboarding Principal',() => {
+describe('Pruebas funcionales',() => {
 
     /* eslint-disable */
     it('Se debe mostrar la pantalla de home', ()=>{
@@ -18,6 +18,17 @@ describe('Prueba Onboarding Principal',() => {
         cy.get(':nth-child(5) > .form-control').type('LionelMessiOk');
         cy.contains('Save').click();
         cy.wait(3000);
+        cy.contains('Lionel Messi').should('exist');
+    });
+
+    it('Eliminar un badge',()=>{
+        cy.visit('/badges');
+        cy.contains('Lionel Messi').should('exist');
+        cy.get(':nth-child(53) > .text-reset > .BadgesListItem').click();
+        cy.get(':nth-child(3) > .btn').click();
+        cy.get('.DeleteBadgeModal > div > .btn-danger').click();
+        cy.wait(3000);
+        cy.contains('Lionel Messi').should('not.exist');
     })
 
 });
