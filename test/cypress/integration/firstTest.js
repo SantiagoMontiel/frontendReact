@@ -1,6 +1,10 @@
 describe('Pruebas funcionales',() => {
 
     /* eslint-disable */
+    before(() => {
+        cy.log('Comienzo la suite de test');
+    });
+
     it('Se debe mostrar la pantalla de home', ()=>{
         cy.visit('')
     });
@@ -29,6 +33,10 @@ describe('Pruebas funcionales',() => {
         cy.get('.DeleteBadgeModal > div > .btn-danger').click();
         cy.wait(3000);
         cy.contains('Lionel Messi').should('not.exist');
+    })
+
+    after(() =>{
+        cy.log('test finalizados');
     })
 
 });
