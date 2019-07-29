@@ -23,3 +23,15 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+/* eslint-disable */
+Cypress.Commands.add('createBadge', (dataBadges) => {
+    cy.get(':nth-child(1) > .form-control').type(dataBadges.name);
+    cy.get(':nth-child(2) > .form-control').type(dataBadges.lastName);
+    cy.get(':nth-child(3) > .form-control').type(dataBadges.email);
+    cy.get(':nth-child(4) > .form-control').type(dataBadges.job);
+    cy.get(':nth-child(5) > .form-control').type(dataBadges.instagram);
+    cy.screenshot('create-badge',{blackout: [':nth-child(3) > .form-control']});
+    cy.contains('Save').click();
+    cy.wait(3000);
+    cy.contains(dataBadges.name + ' ' + dataBadges.lastName).should('exist');
+});
