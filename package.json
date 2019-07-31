@@ -10,7 +10,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:dev": "cypress open --config watchForFileChanges=false --project ./test"
+    "test:dev": "cypress open --config watchForFileChanges=false --project ./test",
+    "test:headless": "cypress run --spec \"cypress/integration/firstTest.js\""
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -31,7 +32,7 @@
       "describe",
       "cy",
       "it"
-      ]
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
