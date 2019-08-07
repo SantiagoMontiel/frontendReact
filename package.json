@@ -11,7 +11,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:dev": "cypress open --config watchForFileChanges=false --project ./test",
-    "test:headless": "cypress run --spec \"cypress/integration/firstTest.js\""
+    "test:headless": "cypress run --spec \"cypress/integration/firstTest.js\" --record"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",

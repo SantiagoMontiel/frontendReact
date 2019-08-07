@@ -25,7 +25,7 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 /* eslint-disable */
 Cypress.Commands.add('createBadge', (dataBadges) => {
-    cy.get(':nth-child(1) > .form-control').type(dataBadges.name).debug();
+    cy.get(':nth-child(1) > .form-control').type(dataBadges.name);
     cy.get(':nth-child(2) > .form-control').type(dataBadges.lastName);
     cy.get(':nth-child(3) > .form-control').type(dataBadges.email);
     cy.get(':nth-child(4) > .form-control').type(dataBadges.job);
