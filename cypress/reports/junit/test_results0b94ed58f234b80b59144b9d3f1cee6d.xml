@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.366999999999999" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-08-07T18:37:24" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Assertions" timestamp="2019-08-07T18:37:24" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Implicit Assertions" timestamp="2019-08-07T18:37:24" tests="2" failures="0" time="1.658">
+    <testcase name="Assertions Implicit Assertions .should() - make an assertion about the current subject" time="1.039" classname=".should() - make an assertion about the current subject">
+    </testcase>
+    <testcase name="Assertions Implicit Assertions .and() - chain multiple assertions together" time="0.619" classname=".and() - chain multiple assertions together">
+    </testcase>
+  </testsuite>
+  <testsuite name="Explicit Assertions" timestamp="2019-08-07T18:37:29" tests="6" failures="0" time="5.709">
+    <testcase name="Assertions Explicit Assertions expect - make an assertion about a specified subject" time="0.508" classname="expect - make an assertion about a specified subject">
+    </testcase>
+    <testcase name="Assertions Explicit Assertions pass your own callback function to should()" time="1.125" classname="pass your own callback function to should()">
+    </testcase>
+    <testcase name="Assertions Explicit Assertions finds element by class name regex" time="0.884" classname="finds element by class name regex">
+    </testcase>
+    <testcase name="Assertions Explicit Assertions can throw any error" time="1.593" classname="can throw any error">
+    </testcase>
+    <testcase name="Assertions Explicit Assertions matches unknown text between two elements" time="0.721" classname="matches unknown text between two elements">
+    </testcase>
+    <testcase name="Assertions Explicit Assertions assert - assert shape of an object" time="0.878" classname="assert - assert shape of an object">
+    </testcase>
+  </testsuite>
+</testsuites>

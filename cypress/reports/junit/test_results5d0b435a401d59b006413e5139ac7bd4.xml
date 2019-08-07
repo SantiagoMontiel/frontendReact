@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.095" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-08-07T18:45:53" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Pruebas funcionales" timestamp="2019-08-07T18:45:54" tests="1" failures="0" time="2.095">
+    <testcase name="Pruebas funcionales Se debe mostrar la pantalla de home" time="2.095" classname="Se debe mostrar la pantalla de home">
+    </testcase>
+  </testsuite>
+</testsuites>

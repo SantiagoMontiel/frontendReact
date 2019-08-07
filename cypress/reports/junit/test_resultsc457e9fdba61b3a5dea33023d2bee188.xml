@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.088" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-08-07T20:20:14" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Spies, Stubs, and Clock" timestamp="2019-08-07T20:20:15" tests="4" failures="0" time="2.088">
+    <testcase name="Spies, Stubs, and Clock cy.spy() - wrap a method in a spy" time="0.473" classname="cy.spy() - wrap a method in a spy">
+    </testcase>
+    <testcase name="Spies, Stubs, and Clock cy.stub() - create a stub and/or replace a function with stub" time="0.582" classname="cy.stub() - create a stub and/or replace a function with stub">
+    </testcase>
+    <testcase name="Spies, Stubs, and Clock cy.clock() - control time in the browser" time="0.355" classname="cy.clock() - control time in the browser">
+    </testcase>
+    <testcase name="Spies, Stubs, and Clock cy.tick() - move time in the browser" time="0.678" classname="cy.tick() - move time in the browser">
+    </testcase>
+  </testsuite>
+</testsuites>

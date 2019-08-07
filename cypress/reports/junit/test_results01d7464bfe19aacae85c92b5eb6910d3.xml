@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.719" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-08-07T18:42:50" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Navigation" timestamp="2019-08-07T18:42:50" tests="3" failures="0" time="5.719">
+    <testcase name="Navigation cy.go() - go back or forward in the browser&apos;s history" time="3.316" classname="cy.go() - go back or forward in the browser&apos;s history">
+    </testcase>
+    <testcase name="Navigation cy.reload() - reload the page" time="1.28" classname="cy.reload() - reload the page">
+    </testcase>
+    <testcase name="Navigation cy.visit() - visit a remote url" time="1.123" classname="cy.visit() - visit a remote url">
+    </testcase>
+  </testsuite>
+</testsuites>

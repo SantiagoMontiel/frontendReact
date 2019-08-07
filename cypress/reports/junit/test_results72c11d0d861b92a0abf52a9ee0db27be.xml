@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.687" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-08-07T20:21:40" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Window" timestamp="2019-08-07T20:21:40" tests="3" failures="0" time="1.687">
+    <testcase name="Window cy.window() - get the global window object" time="0.803" classname="cy.window() - get the global window object">
+    </testcase>
+    <testcase name="Window cy.document() - get the document object" time="0.321" classname="cy.document() - get the document object">
+    </testcase>
+    <testcase name="Window cy.title() - get the title" time="0.563" classname="cy.title() - get the title">
+    </testcase>
+  </testsuite>
+</testsuites>

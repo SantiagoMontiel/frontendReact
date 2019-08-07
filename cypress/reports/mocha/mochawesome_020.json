@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-08-07T20:21:51.386Z",
+    "end": "2019-08-07T20:22:10.044Z",
+    "duration": 18658,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9be2beb9-60f1-4342-b8a8-6d8565d14b9a",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b1685376-ae9f-4eb4-9db1-490c486347fa",
+          "title": "Pruebas funcionales",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Se debe mostrar la pantalla de home",
+              "fullTitle": "Pruebas funcionales Se debe mostrar la pantalla de home",
+              "timedOut": null,
+              "duration": 1235,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('');",
+              "err": {},
+              "uuid": "1b0e8259-7f10-4a5d-9d10-0cecd2893617",
+              "parentUUID": "b1685376-ae9f-4eb4-9db1-490c486347fa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Hacer click sobre el boton Start",
+              "fullTitle": "Pruebas funcionales Hacer click sobre el boton Start",
+              "timedOut": null,
+              "duration": 318,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Start').click();",
+              "err": {},
+              "uuid": "69f7a243-a155-45ce-be42-8244fbe76359",
+              "parentUUID": "b1685376-ae9f-4eb4-9db1-490c486347fa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agregar un nuevo badge",
+              "fullTitle": "Pruebas funcionales Agregar un nuevo badge",
+              "timedOut": null,
+              "duration": 5678,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@dataBadges').then(function (dataBadges) {\n  cy.visit('/badges/new');\n  cy.createBadge(dataBadges);\n});",
+              "err": {},
+              "uuid": "d354c3ff-3c18-4aff-a752-c44f04f6e5b8",
+              "parentUUID": "b1685376-ae9f-4eb4-9db1-490c486347fa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar un badge",
+              "fullTitle": "Pruebas funcionales Eliminar un badge",
+              "timedOut": null,
+              "duration": 11338,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@dataBadges').then(function (dataBadges) {\n  cy.visit('/badges');\n  cy.contains(dataBadges.name + ' ' + dataBadges.lastName).should('exist');\n  cy.get(':nth-child(53) > .text-reset > .BadgesListItem').click();\n  cy.get(':nth-child(3) > .btn').click();\n  cy.screenshot('delete-badge');\n  cy.get('.DeleteBadgeModal > div > .btn-danger').click();\n  cy.wait(3000);\n  cy.contains('Lionel Messi').should('not.exist');\n  Cypress.env();\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected not to find content: 'Lionel Messi' but continuously found it.",
+                "estack": "CypressError: Timed out retrying: Expected not to find content: 'Lionel Messi' but continuously found it.\n    at Object.cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:85348:11)\n    at Object.throwErr (http://localhost:3000/__cypress/runner/cypress_runner.js:85303:18)\n    at Object.throwErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:85335:17)\n    at retry (http://localhost:3000/__cypress/runner/cypress_runner.js:77321:16)\n    at onFailFn (http://localhost:3000/__cypress/runner/cypress_runner.js:68422:16)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:118962:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:116898:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:116955:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:117000:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:117075:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:113687:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:113697:10)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:113571:14)\n    at <anonymous>",
+                "diff": null
+              },
+              "uuid": "c75885bc-5f39-4553-9a3c-031eafac3991",
+              "parentUUID": "b1685376-ae9f-4eb4-9db1-490c486347fa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1b0e8259-7f10-4a5d-9d10-0cecd2893617",
+            "69f7a243-a155-45ce-be42-8244fbe76359",
+            "d354c3ff-3c18-4aff-a752-c44f04f6e5b8"
+          ],
+          "failures": [
+            "c75885bc-5f39-4553-9a3c-031eafac3991"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18569,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}
