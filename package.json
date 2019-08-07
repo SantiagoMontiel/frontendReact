@@ -10,7 +10,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:dev": "cypress open --config watchForFileChanges=false --project ./test",
+    "cypress:open": "cypress open --config watchForFileChanges=false --project ./test",
+    "test:dev": "npm-run-all -l -p start cypress:open",
     "test:headless": "cypress run --spec \"cypress/integration/firstTest.js\""
   },
   "dependencies": {
@@ -19,7 +20,7 @@
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-router-dom": "4.3.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "^3.0.1"
   },
   "devDependencies": {
     "cypress": "^3.4.0",
