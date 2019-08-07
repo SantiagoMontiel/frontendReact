@@ -12,7 +12,7 @@ describe('Pruebas funcionales',() => {
     });
 
     it('Se debe mostrar la pantalla de home', ()=>{
-        cy.visit('')
+        cy.visit('');
     });
 
     it('Hacer click sobre el boton Start',()=>{
@@ -33,10 +33,11 @@ describe('Pruebas funcionales',() => {
             cy.contains(dataBadges.name + ' ' + dataBadges.lastName).should('exist');
             cy.get(':nth-child(53) > .text-reset > .BadgesListItem').click();
             cy.get(':nth-child(3) > .btn').click();
-            // cy.screenshot('delete-badge');
+            cy.screenshot('delete-badge');
             cy.get('.DeleteBadgeModal > div > .btn-danger').click();
             cy.wait(3000);
             cy.contains('Lionel Messi').should('not.exist');
+            Cypress.env()
         });
     });
 

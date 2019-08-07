@@ -12,7 +12,7 @@
     "eject": "react-scripts eject",
     "cypress:open": "cypress open --config watchForFileChanges=false --project ./test",
     "test:dev": "npm-run-all -l -p start cypress:open",
-    "test:headless": "cypress run --spec \"cypress/integration/firstTest.js\""
+    "test:headless": "cypress run --spec \"cypress/integration/firstTest.js\" --record"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
