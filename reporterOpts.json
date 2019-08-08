@@ -5,10 +5,14 @@
     "toConsole": false
   },
   "mochawesomeReporterOptions": {
+    "reportTitle": "Front-End React - Platzi Badges",
+    "reportPageTitle": "Front-End React - Platzi Badges",
+    "charts": true,
     "reportDir": "cypress/reports/mocha",
     "quiet": true,
-    "overwrite": false,
+    "overwrite": true,
     "html": true,
-    "json": true
+    "json": true,
+    "inline": true
   }
 }

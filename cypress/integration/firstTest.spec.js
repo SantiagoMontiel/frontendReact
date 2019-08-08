@@ -1,4 +1,5 @@
 'use strict'
+const addContext = require('mochawesome/addContext');
 
 describe('Pruebas funcionales',() => {
 
@@ -8,8 +9,10 @@ describe('Pruebas funcionales',() => {
     });
 
     it('Se debe mostrar la pantalla de home', ()=>{
+        var test=this;
         cy.visit('');
         cy.screenshot();
+        addContext(test, 'http://i.imgur.com/c4jt321.png');
     });
 
 });
