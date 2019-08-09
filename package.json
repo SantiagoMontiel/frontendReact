@@ -10,7 +10,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress:open": "cypress open --config watchForFileChanges=false --project ./test",
+    "cypress:open2": "cypress open --config watchForFileChanges=false --project ./test",
+    "cypress:open": "cypress open",
     "test:dev": "npm-run-all -l -p start cypress:open",
     "test:report": "cypress run --project ./test",
     "test:report2": "cypress run --reporter mocha-multi-reporters --reporter-options configFile=reporter-config.json",
@@ -18,8 +19,8 @@
     "prereport": "npm run delete:reports",
     "cypress:report": "cypress run",
     "cypress:mochaReport": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochawesome.json",
-    "cypress:mergeReport": "npx mochawesome-report-generator mochawesome.json",
-    "report": "npm-run-all -l -p cypress:report cypress:mochaReport cypress:mergeReport"
+    "cypress:margeReport": "npx mochawesome-report-generator mochawesome.json",
+    "report": "npm-run-all -l -s cypress:report cypress:mochaReport cypress:margeReport"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",

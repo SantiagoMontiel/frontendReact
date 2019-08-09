@@ -3,6 +3,14 @@
   "baseUrl": "http://localhost:3000",
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
-    "configFile": "reporterOpts.json"
+    "configFile": "reporterOpts.json",
+    "reportTitle": "Front-End React - Platzi Badges",
+    "reportPageTitle": "Front-End React - Platzi Badges",
+    "charts": true,
+    "quiet": true,
+    "overwrite": true,
+    "html": true,
+    "json": true,
+    "inline": true
   }
 }

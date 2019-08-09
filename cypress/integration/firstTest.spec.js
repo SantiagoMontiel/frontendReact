@@ -9,10 +9,13 @@ describe('Pruebas funcionales',() => {
     });
 
     it('Se debe mostrar la pantalla de home', ()=>{
-        var test=this;
         cy.visit('');
         cy.screenshot();
-        addContext(test, 'http://i.imgur.com/c4jt321.png');
+        addTestContext('Image', 'http://i.imgur.com/c4jt321.png');
     });
 
 });
+
+function addTestContext(title, value) {
+    cy.once('test:after:run', test => addContext({ test }, { title, value }));
+}
