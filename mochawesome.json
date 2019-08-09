@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2019-08-09T12:33:06.257Z",
-    "end": "2019-08-09T12:33:06.257Z",
-    "duration": 160,
+    "start": "2019-08-09T13:38:01.173Z",
+    "end": "2019-08-09T13:38:01.173Z",
+    "duration": 89,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1b560fde-4f70-409e-aa48-83245535a633",
+      "uuid": "948d606f-a112-4da6-aa78-d0c678e4837d",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7ae37412-6ecc-46ad-b2e8-46a6a509db80",
+          "uuid": "44903a45-f5fe-424b-bcc8-a2c9722e6462",
           "title": "test suite",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "should add context",
               "fullTitle": "test suite should add context",
               "timedOut": null,
-              "duration": 160,
+              "duration": 89,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "[\n  {\n    \"title\": \"Text\",\n    \"value\": \"simple string\"\n  },\n  {\n    \"title\": \"Link\",\n    \"value\": \"http://localhost:3000\"\n  },\n  {\n    \"title\": \"Image\",\n    \"value\": \"http://i.imgur.com/c4jt321.png\"\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": {\n      \"title\": \"expected output\",\n      \"value\": {\n        \"a\": 1,\n        \"b\": \"2\",\n        \"c\": \"d\"\n      }\n    }\n  }\n]",
-              "code": "// context can be a simple string\naddTestContext('Text', 'simple string'); // context can be a url and the report will create a link\naddTestContext('Link', 'http://localhost:3000'); // context can be an image url and the report will show it inline\naddTestContext('Image', 'http://i.imgur.com/c4jt321.png'); // context can be an object with title and value properties\naddTestContext('Response', {\n  title: 'expected output',\n  value: {\n    a: 1,\n    b: '2',\n    c: 'd'\n  }\n});",
+              "context": "[\n  {\n    \"title\": \"Text\",\n    \"value\": \"simple string\"\n  },\n  {\n    \"title\": \"Link\",\n    \"value\": \"http://localhost:3000\"\n  },\n  {\n    \"title\": \"Image\",\n    \"value\": \"http://i.imgur.com/c4jt321.png\"\n  },\n  {\n    \"title\": \"Video\",\n    \"value\": \"https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4\"\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": {\n      \"title\": \"expected output\",\n      \"value\": {\n        \"a\": 1,\n        \"b\": \"2\",\n        \"c\": \"d\"\n      }\n    }\n  }\n]",
+              "code": "// context can be a simple string\naddTestContext('Text', 'simple string'); // context can be a url and the report will create a link\naddTestContext('Link', 'http://localhost:3000'); // context can be an image url and the report will show it inline\naddTestContext('Image', 'http://i.imgur.com/c4jt321.png'); // context can be an video url and the report will show it inline\naddTestContext('Video', 'https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4'); // context can be an object with title and value properties\naddTestContext('Response', {\n  title: 'expected output',\n  value: {\n    a: 1,\n    b: '2',\n    c: 'd'\n  }\n});",
               "err": {},
-              "uuid": "e63b0794-f01c-45b1-a3bc-196f59386f9e",
-              "parentUUID": "7ae37412-6ecc-46ad-b2e8-46a6a509db80",
+              "uuid": "e5d4d8e1-9b29-4e60-8965-48297b081a07",
+              "parentUUID": "44903a45-f5fe-424b-bcc8-a2c9722e6462",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e63b0794-f01c-45b1-a3bc-196f59386f9e"
+            "e5d4d8e1-9b29-4e60-8965-48297b081a07"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 160,
+          "duration": 89,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

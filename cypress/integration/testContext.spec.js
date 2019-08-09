@@ -12,6 +12,9 @@ describe('test suite', () => {
         // context can be an image url and the report will show it inline
         addTestContext('Image', 'http://i.imgur.com/c4jt321.png');
 
+        // context can be an video url and the report will show it inline
+        addTestContext('Video', 'https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4');
+
         // context can be an object with title and value properties
         addTestContext('Response', {
             title: 'expected output',
