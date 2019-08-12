@@ -11,9 +11,16 @@ node_modules
 /.vscode
 
 cypress/screenshots/*
+cypress/screenshots
 cypress/videos/*
+cypress/videos
 cypress/reports/*
+cypress/reports
 cypress/results/*
+cypress/results
 test/cypress/screenshots/*
 test/cypress/videos/*
 test/cypress/results/*
+mochawesome.json
+mochawesome-report
+mochawesome-report/*

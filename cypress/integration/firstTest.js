@@ -1,4 +1,7 @@
 const addContext = require('mochawesome/addContext');
+
+const nameTest = "firstTest";
+
 function addTestContext(title, value) {
     cy.once('test:after:run', test => addContext({ test }, { title, value }));
 }
@@ -12,7 +15,11 @@ describe('Pruebas funcionales',() => {
 
     beforeEach( () => {
         cy.fixture('dataBadges.json').as('dataBadges');
-        addTestContext('Badges', '@dataBadges');
+        /*
+        .then((resDataBadges) => {
+            addTestContext('Badges', resDataBadges);
+        })
+        */
     });
 
     it('Se debe mostrar la pantalla de home', ()=>{
@@ -26,6 +33,7 @@ describe('Pruebas funcionales',() => {
     it('Agregar un nuevo badge',()=>{
         cy.get('@dataBadges').then((dataBadges) =>{
             cy.visit('/badges/new');
+            addTestContext('Badges', dataBadges);
             cy.createBadge(dataBadges);
         });
 
@@ -38,7 +46,7 @@ describe('Pruebas funcionales',() => {
             cy.get(':nth-child(53) > .text-reset > .BadgesListItem').click();
             cy.get(':nth-child(3) > .btn').click();
             cy.screenshot('delete-badge');
-            addTestContext('Delete Badge', './cypress/screenshots/firstTest.js/delete-badge.png');
+            addTestContext('Delete Badge', '../cypress/screenshots/'+nameTest+'.js/delete-badge.png');
             cy.get('.DeleteBadgeModal > div > .btn-danger').click();
             cy.wait(3000);
             cy.contains('Lionel Messi').should('not.exist');
