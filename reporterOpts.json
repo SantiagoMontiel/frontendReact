@@ -8,11 +8,13 @@
     "reportTitle": "Front-End React - Platzi Badges",
     "reportPageTitle": "Front-End React - Platzi Badges",
     "charts": true,
+    "code": false,
     "reportDir": "cypress/reports/mocha",
     "quiet": true,
-    "overwrite": true,
+    "overwrite": false,
     "html": true,
     "json": true,
-    "inline": true
+    "inline": false,
+    "autoOpen": false
   }
 }

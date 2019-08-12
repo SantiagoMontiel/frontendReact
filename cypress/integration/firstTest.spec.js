@@ -1,4 +1,3 @@
-'use strict'
 const addContext = require('mochawesome/addContext');
 
 describe('Pruebas funcionales',() => {
