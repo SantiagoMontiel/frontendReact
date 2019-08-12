@@ -1,6 +1,6 @@
 const addContext = require('mochawesome/addContext');
 
-const nameTest = "firstTest";
+const nameTest = "firstTest.js";
 
 function addTestContext(title, value) {
     cy.once('test:after:run', test => addContext({ test }, { title, value }));
@@ -46,7 +46,7 @@ describe('Pruebas funcionales',() => {
             cy.get(':nth-child(53) > .text-reset > .BadgesListItem').click();
             cy.get(':nth-child(3) > .btn').click();
             cy.screenshot('delete-badge');
-            addTestContext('Delete Badge', '../cypress/screenshots/'+nameTest+'.js/delete-badge.png');
+            addTestContext('Delete Badge', '../cypress/screenshots/'+nameTest+'/delete-badge.png');
             cy.get('.DeleteBadgeModal > div > .btn-danger').click();
             cy.wait(3000);
             cy.contains('Lionel Messi').should('not.exist');
@@ -56,6 +56,7 @@ describe('Pruebas funcionales',() => {
 
     after(() =>{
         cy.log('test finalizados');
+        addTestContext('Video', '../cypress/videos/'+nameTest+'.mp4');
     })
 
 });
