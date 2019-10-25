@@ -55,8 +55,12 @@ describe('Pruebas de Regresion',() => {
         });
     });
 
+    afterEach( () =>{
+        cy.log('test finalizado correctamente');
+    });
+
     after(() =>{
-        cy.log('test finalizados');
+        cy.log('Suite de Regresion finalizada');
     })
 
 });
