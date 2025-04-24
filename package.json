@@ -30,7 +30,7 @@
     "mocha-junit-reporters": "^1.23.6",
     "react": "16.8.3",
     "react-dom": "16.8.3",
-    "react-router-dom": "4.3.1",
+    "react-router-dom": "7.5.2",
     "react-scripts": "^3.0.1",
     "typescript": "^3.5.3"
   },
